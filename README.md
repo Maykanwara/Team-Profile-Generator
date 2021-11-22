@@ -3,21 +3,22 @@
 # Kanwara Moore
 ​
 ## Description
-​This is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+​This is to build a Team-Profile-Generator that will run in the browser and feature dynamically updated HTML and node.js
 
 ​
 ## Languages
+
 - HTML
 - node.js
 
 ​
 ## Link to GitHub main project page
 ​
-[Server-Side-APIs-Weather-Dashboard Page on GitHub](https://github.com/Maykanwara/Team-Profile-Generator)
+[Server-Side-Team-Profile-GeneratorPage on GitHub](https://github.com/Maykanwara/Team-Profile-Generator)
 ​
 ## Link to Deployed Application
 
-[Live Depoyment Link](/))
+[Live Deployment Link](https://maykanwara.github.io/Team-Profile-Generator)
 ​
 ## Screenshots of Finished Product
 ​
