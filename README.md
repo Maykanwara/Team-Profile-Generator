@@ -1,6 +1,6 @@
 # Team-Profile-Generator
 
-# Kanwara Moore
+
 ​
 ## Description
 ​This is to build a Team-Profile-Generator that will run in the browser and feature dynamically updated HTML and node.js
