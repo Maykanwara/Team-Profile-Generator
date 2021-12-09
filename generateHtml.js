@@ -1,15 +1,16 @@
 var team = [{name: 'edward'}, {name: 'ethan'}]
-
-function generateHtml() {
-
+var fs = require("fs")
+function generateHtml(team) {
+console.log(team)
 
 var cards = []
 
 for (let index = 0; index < team.length; index++) {
     var card = `
-            <h1> My name is  ${team[i].name} </h1>
+            <h1> My name is  ${team[index].name} </h1>
     `
     cards.push(card)
+
     
 }
 
@@ -28,6 +29,10 @@ var fakeHtml = `
 </html>
 `
 
+fs.writeFIle('test.html', fakeHtml, function(err) {
+
+})
+return fakeHtml
 }
 
 module.exports = generateHtml
