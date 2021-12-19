@@ -11,13 +11,14 @@ const writeFileAsync = util.promisify(fs.writeFile);
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-// const render = require('./lib/htmlRenderer');
+
 const makeHtml = require('./generateHtml.js');
 const Employee = require("./lib/Employee");
 const inquirer = require("inquirer");
 const Manager = require("./lib/manager");
+const { Console } = require("console");
 
-// const newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.github, answers.role)
+
 
 const questions = [
   { name: "id", message: "What's the employee's id" },
@@ -53,6 +54,15 @@ const confirm = [
 
 let addmore = true;
 const init = async () => {
+  // const employee = {
+  //   id: 0,
+  //   name: '',
+  //   role: '',
+  //   email:'',
+  //   officeNumber: 0,
+  //   github: '',
+  //   internsSchool: '',
+  // };
   const employees = [];
 
   const { id, name, role, email } = await inquirer.prompt(questions);
@@ -60,40 +70,29 @@ const init = async () => {
   if (role === "Manager") {
     const { officeNumber } = await inquirer.prompt(questionForManager);
 
-    employeeArray.push(new Manager(id, name, email, officeNumber));
+    employeeArray.push(new Manager(id, name, email, officeNumber,role));
   } else if (role === "Engineer") {
     const { github } = await inquirer.prompt(questionForEngineer);
-    console.log(github);
+   
 
-    employeeArray.push(new Engineer(id, name, email, github));
+    employeeArray.push(new Engineer(id, name, email, github, role));
   } else {
     const { school } = await inquirer.prompt(questionForIntern);
 
-    employeeArray.push(new Intern(id, name, email, school));
+    employeeArray.push(new Intern(id, name, email, school, role));
   }
 
   const { adding } = await inquirer.prompt(confirm);
-  console.log(adding);
+
   addMore = adding;
   if (adding) {
     init();
-    // console.log(employeeArray);
+    
 
   } else {
     const html = makeHtml(employeeArray);
     console.log(html)
-    // if addMore = false loop over employeeArray
-    //display to indexed.html
-    // if (!fs.existsSync(outputPath)) {
-    //   const error = await mkdirAsync(OUTPUT_DIR);
-    //   error && console.error(error);
-    // }
-
-    // const error = await writeFileAsync(outputPath, html);
-    // error && console.error(error);
-  }
-
-  // while addMore is true
+    
 };
 
 init();
