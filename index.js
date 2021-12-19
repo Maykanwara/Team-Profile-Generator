@@ -54,15 +54,7 @@ const confirm = [
 
 let addmore = true;
 const init = async () => {
-  // const employee = {
-  //   id: 0,
-  //   name: '',
-  //   role: '',
-  //   email:'',
-  //   officeNumber: 0,
-  //   github: '',
-  //   internsSchool: '',
-  // };
+  
   const employees = [];
 
   const { id, name, role, email } = await inquirer.prompt(questions);
@@ -90,9 +82,9 @@ const init = async () => {
     
 
   } else {
-    const html = makeHtml(employeeArray);
+    const { html } = makeHtml(employeeArray);
     console.log(html)
-    
+  } 
 };
 
-init();
+init()
