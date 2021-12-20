@@ -19,7 +19,7 @@ function generateHtml(team) {
       </div>
       <div class="card-body">
         <ul class="list-group">
-          <li class="list-group-item">ID: 4</li>
+          <li class="list-group-item">ID: 1</li>
           <li class="list-group-item">
             Email:
             <a href = "mailto: seattlehomie49@yahoo.com">seattlehomie49@yahoo.com</a>
@@ -36,19 +36,20 @@ function generateHtml(team) {
         </ul>
       </div>
     </div>`;
+    }
     
 
     if (team[index].role === "Manager") {
       card = `<div class="card employee-card">
         <div class="card-header">
-          <h2 class="card-title">may</h2>
+          <h2 class="card-title">Kanwara</h2>
           <h3 class="card-title">
             <i class="fas fa-mug-hot mr-2"></i>Manager
           </h3>
         </div>
         <div class="card-body">
           <ul class="list-group">
-            <li class="list-group-item">ID: 1</li>
+            <li class="list-group-item">ID: 2</li>
             <li class="list-group-item">
               Email:
               <a href="mailto:maykanwara@gmail.com">maykanwara@gmail.com</a>
@@ -70,7 +71,7 @@ function generateHtml(team) {
         </div>
         <div class="card-body">
           <ul class="list-group">
-            <li class="list-group-item">ID: 5</li>
+            <li class="list-group-item">ID: 3</li>
             <li class="list-group-item">
               Email:
               <a href ="mailto: kanwara_p@yahoo.com">kanwara_p@yahoo.com</a>
@@ -107,7 +108,7 @@ function generateHtml(team) {
 <div class="container">
 <div class="row">
   <div class="team-area col-12 d-flex justify-content-center">
-    ${cards}
+    ${cards.join("")}
     </div>
       </div>
     </div>
@@ -121,4 +122,4 @@ function generateHtml(team) {
   return html;
 }
 
-module.exports = generateHtml};
+module.exports = generateHtml;

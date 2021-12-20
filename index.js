@@ -82,7 +82,7 @@ const init = async () => {
     
 
   } else {
-    const { html } = makeHtml(employeeArray);
+    const  html = makeHtml(employeeArray);
     console.log(html)
   } 
 };

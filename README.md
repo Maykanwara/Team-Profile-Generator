@@ -21,7 +21,7 @@
 [Live Deployment Link](https://maykanwara.github.io/Team-Profile-Generator)
 
 ## Screenshots of Finished Product
-
+[Screenshots of Finished Product](assets/HW10.png)
 # Contact Information
 ​Email: maykanwara@gmail.com
 
