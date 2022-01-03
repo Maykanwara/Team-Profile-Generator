@@ -3,7 +3,7 @@
 
 
 ## Description
-​This is to build a Team-Profile-Generator that will run in the browser and feature dynamically updated HTML and node.js
+This is to build a Team-Profile-Generator that will run in the browser and feature dynamically updated HTML and node.js
 
 
 ## Languages
@@ -23,7 +23,7 @@
 ## Screenshots of Finished Product
 [Screenshots of Finished Product](assets/HW10.png)
 # Contact Information
-​Email: maykanwara@gmail.com
+Email: maykanwara@gmail.com
 
 
 

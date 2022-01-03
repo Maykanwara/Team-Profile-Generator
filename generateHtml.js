@@ -1,28 +1,34 @@
-var team = [{ name: "edward" }, { name: "ethan" }];
+// var team = [{ name: "edward" }, { name: "ethan" }];
 var fs = require("fs");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/manager");
-function generateHtml(team) {
 
+
+function generateHtml(team) {
+console.log(__dirname)
 
   var cards = [];
 
   for (let index = 0; index < team.length; index++) {
     let card = "";
+
+    console.log(team)
+    console.log(team[index])
+
     if (team[index].role === "Engineer") {
       card = `<div class="card employee-card">
       <div class="card-header">
-        <h2 class="card-title">Edward</h2>
+        <h2 class="card-title">${team[index].name}</h2>
         <h3 class="card-title">
           <i class="fas fa-glasses mr-2"></i>Engineer
         </h3>
       </div>
       <div class="card-body">
         <ul class="list-group">
-          <li class="list-group-item">ID: 1</li>
+          <li class="list-group-item">ID: ${team[index].id}</li>
           <li class="list-group-item">
             Email:
-            <a href = "mailto: seattlehomie49@yahoo.com">seattlehomie49@yahoo.com</a>
+            <a href = "mailto: ${team[index].email}">${team[index].email}</a>
           </li>
           <li class="list-group-item">
             GitHub:
@@ -42,19 +48,19 @@ function generateHtml(team) {
     if (team[index].role === "Manager") {
       card = `<div class="card employee-card">
         <div class="card-header">
-          <h2 class="card-title">Kanwara</h2>
+          <h2 class="card-title">${team[index].name}</h2>
           <h3 class="card-title">
             <i class="fas fa-mug-hot mr-2"></i>Manager
           </h3>
         </div>
         <div class="card-body">
           <ul class="list-group">
-            <li class="list-group-item">ID: 2</li>
+            <li class="list-group-item">ID: ${team[index].id}</li>
             <li class="list-group-item">
               Email:
-              <a href="mailto:maykanwara@gmail.com">maykanwara@gmail.com</a>
+              <a href="mailto: ${team[index].email}"> ${team[index].email}</a>
             </li>
-            <li class="list-group-item">Office number: 1</li>
+            <li class="list-group-item">Office number: ${team[index].officeNumber}</li>
           </ul>
         </div>
       </div>`;
@@ -64,19 +70,19 @@ function generateHtml(team) {
     if (team[index].role === "Intern") {
         card =  `<div class="card employee-card">
         <div class="card-header">
-          <h2 class="card-title">Ethan</h2>
+          <h2 class="card-title">${team[index].name}</h2>
           <h3 class="card-title">
             <i class="fas fa-user-graduate mr-2"></i>Intern
           </h3>
         </div>
         <div class="card-body">
           <ul class="list-group">
-            <li class="list-group-item">ID: 3</li>
+            <li class="list-group-item">ID: ${team[index].id}</li>
             <li class="list-group-item">
               Email:
-              <a href ="mailto: kanwara_p@yahoo.com">kanwara_p@yahoo.com</a>
+              <a href ="mailto: ${team[index].email}"> ${team[index].name}</a>
             </li>
-            <li class="list-group-item">School: UW</li>
+            <li class="list-group-item">School: ${team[index].school}</li>
           </ul>
         </div>
       </div>`;
@@ -116,7 +122,7 @@ function generateHtml(team) {
 </html>
 `;
 
-  fs.writeFile("output/test.html", html, function (err) {
+  fs.writeFile(__dirname + "/output/test.html", html, function (err) {
     console.log(err);
   });
   return html;
